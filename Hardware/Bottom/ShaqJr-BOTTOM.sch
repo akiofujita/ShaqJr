@@ -6621,7 +6621,7 @@ and LEDs</text>
 <text x="124.46" y="50.8" size="2.54" layer="97" font="vector" ratio="15">Digital Potentiometers</text>
 <text x="17.78" y="78.74" size="2.54" layer="97" font="vector" ratio="15">Transimpedance Amplifier</text>
 <text x="101.6" y="12.7" size="1.778" layer="97" ratio="15">I2C Address: 0x2C</text>
-<text x="167.64" y="15.24" size="1.778" layer="97" ratio="15">I2C Address: 0x2D</text>
+<text x="170.18" y="20.32" size="1.778" layer="97" ratio="15">I2C Address: 0x2D</text>
 <wire x1="-38.1" y1="149.86" x2="228.6" y2="149.86" width="1.016" layer="94" style="longdash"/>
 <wire x1="228.6" y1="149.86" x2="228.6" y2="-53.34" width="1.016" layer="94" style="longdash"/>
 <wire x1="228.6" y1="-53.34" x2="-38.1" y2="-53.34" width="1.016" layer="94" style="longdash"/>
@@ -6650,6 +6650,12 @@ Bypass Capacitors</text>
 <text x="48.26" y="170.18" size="7.62" layer="97" font="vector" ratio="15">Shaq Jr PPG Circuit</text>
 <text x="162.56" y="-12.7" size="2.54" layer="97">Real-Time Clock</text>
 <text x="182.88" y="-43.18" size="1.27" layer="97">I2C Address = 0x68h</text>
+<text x="187.96" y="5.08" size="1.778" layer="91">I_B = (3.3V-0.6V)/(R_pot + R9)
+LED_current = I_B * Gain
+
+Current gain of an NPN transistor is
+often written as HFE in datasheets</text>
+<text x="17.78" y="71.12" size="1.778" layer="91">Gain = -Rf (in pass band)</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="-20.32" y="104.14" smashed="yes"/>
@@ -6670,9 +6676,9 @@ Bypass Capacitors</text>
 <instance part="GND7" gate="G$1" x="-2.54" y="17.78" smashed="yes">
 <attribute name="VALUE" x="-2.54" y="17.526" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="AD5171" gate="G$1" x="180.34" y="33.02" smashed="yes">
-<attribute name="NAME" x="170.18" y="41.91" size="2.032" layer="95"/>
-<attribute name="VALUE" x="170.18" y="19.05" size="2.032" layer="96"/>
+<instance part="AD5171" gate="G$1" x="182.88" y="38.1" smashed="yes">
+<attribute name="NAME" x="172.72" y="46.99" size="2.032" layer="95"/>
+<attribute name="VALUE" x="172.72" y="24.13" size="2.032" layer="96"/>
 </instance>
 <instance part="R3" gate="G$1" x="58.42" y="114.3" smashed="yes" rot="R90">
 <attribute name="NAME" x="56.9214" y="110.49" size="1.778" layer="95" rot="R90"/>
@@ -6698,12 +6704,12 @@ Bypass Capacitors</text>
 <attribute name="NAME" x="105.1814" y="107.95" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="109.982" y="107.95" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND8" gate="G$1" x="215.9" y="22.86" smashed="yes">
-<attribute name="VALUE" x="215.9" y="22.606" size="1.778" layer="96" align="top-center"/>
+<instance part="GND8" gate="G$1" x="218.44" y="27.94" smashed="yes">
+<attribute name="VALUE" x="218.44" y="27.686" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="R9" gate="G$1" x="203.2" y="33.02" smashed="yes">
-<attribute name="NAME" x="199.39" y="34.5186" size="1.778" layer="95"/>
-<attribute name="VALUE" x="199.39" y="29.718" size="1.778" layer="96"/>
+<instance part="R9" gate="G$1" x="205.74" y="38.1" smashed="yes">
+<attribute name="NAME" x="201.93" y="39.5986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="201.93" y="34.798" size="1.778" layer="96"/>
 </instance>
 <instance part="GND9" gate="1" x="129.54" y="17.78" smashed="yes">
 <attribute name="VALUE" x="129.54" y="17.526" size="1.778" layer="96" align="top-center"/>
@@ -6731,11 +6737,11 @@ Bypass Capacitors</text>
 <instance part="SUPPLY6" gate="G$1" x="2.54" y="38.1" smashed="yes">
 <attribute name="VALUE" x="2.54" y="40.894" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="SUPPLY7" gate="G$1" x="162.56" y="40.64" smashed="yes">
-<attribute name="VALUE" x="162.56" y="43.434" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY7" gate="G$1" x="165.1" y="45.72" smashed="yes">
+<attribute name="VALUE" x="165.1" y="48.514" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="GND10" gate="G$1" x="162.56" y="20.32" smashed="yes">
-<attribute name="VALUE" x="162.56" y="20.066" size="1.778" layer="96" align="top-center"/>
+<instance part="GND10" gate="G$1" x="165.1" y="25.4" smashed="yes">
+<attribute name="VALUE" x="165.1" y="25.146" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="R10" gate="G$1" x="25.4" y="33.02" smashed="yes" rot="R90">
 <attribute name="NAME" x="23.9014" y="29.21" size="1.778" layer="95" rot="R90"/>
@@ -6751,19 +6757,19 @@ Bypass Capacitors</text>
 <instance part="SUPPLY10" gate="G$1" x="25.4" y="40.64" smashed="yes">
 <attribute name="VALUE" x="25.4" y="43.434" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="Q2" gate="G$1" x="213.36" y="33.02" smashed="yes">
-<attribute name="NAME" x="215.9" y="33.02" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="215.9" y="30.734" size="1.778" layer="96" font="vector"/>
+<instance part="Q2" gate="G$1" x="215.9" y="38.1" smashed="yes">
+<attribute name="NAME" x="218.44" y="38.1" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="218.44" y="35.814" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="SUPPLY11" gate="G$1" x="149.86" y="38.1" smashed="yes">
-<attribute name="VALUE" x="149.86" y="40.894" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY11" gate="G$1" x="152.4" y="43.18" smashed="yes">
+<attribute name="VALUE" x="152.4" y="45.974" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="C12" gate="G$1" x="149.86" y="33.02" smashed="yes" rot="R180">
-<attribute name="NAME" x="148.336" y="30.099" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="148.336" y="35.179" size="1.778" layer="96" rot="R180"/>
+<instance part="C12" gate="G$1" x="152.4" y="38.1" smashed="yes" rot="R180">
+<attribute name="NAME" x="150.876" y="35.179" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="150.876" y="40.259" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="GND12" gate="G$1" x="149.86" y="22.86" smashed="yes">
-<attribute name="VALUE" x="149.86" y="22.606" size="1.778" layer="96" align="top-center"/>
+<instance part="GND12" gate="G$1" x="152.4" y="27.94" smashed="yes">
+<attribute name="VALUE" x="152.4" y="27.686" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="SUPPLY12" gate="G$1" x="81.28" y="43.18" smashed="yes">
 <attribute name="VALUE" x="81.28" y="45.974" size="1.778" layer="96" align="bottom-center"/>
@@ -6943,7 +6949,7 @@ Bypass Capacitors</text>
 <wire x1="-2.54" y1="20.32" x2="-2.54" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="215.9" y1="27.94" x2="215.9" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="33.02" x2="218.44" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="GND8" gate="G$1" pin="GND"/>
 <pinref part="Q2" gate="G$1" pin="E"/>
 </segment>
@@ -6967,9 +6973,9 @@ Bypass Capacitors</text>
 </segment>
 <segment>
 <pinref part="AD5171" gate="G$1" pin="GND"/>
-<wire x1="165.1" y1="25.4" x2="162.56" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="30.48" x2="165.1" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="GND10" gate="G$1" pin="GND"/>
-<wire x1="162.56" y1="25.4" x2="162.56" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="30.48" x2="165.1" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R11" gate="G$1" pin="1"/>
@@ -6979,7 +6985,7 @@ Bypass Capacitors</text>
 <segment>
 <pinref part="C12" gate="G$1" pin="1"/>
 <pinref part="GND12" gate="G$1" pin="GND"/>
-<wire x1="149.86" y1="25.4" x2="149.86" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="30.48" x2="152.4" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C13" gate="G$1" pin="1"/>
@@ -7059,13 +7065,13 @@ Bypass Capacitors</text>
 </segment>
 <segment>
 <pinref part="AD5171" gate="G$1" pin="VDD"/>
-<wire x1="165.1" y1="38.1" x2="162.56" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="43.18" x2="165.1" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="SUPPLY7" gate="G$1" pin="3.3V"/>
-<wire x1="162.56" y1="40.64" x2="162.56" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="45.72" x2="165.1" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="AD5171" gate="G$1" pin="A0"/>
-<wire x1="165.1" y1="27.94" x2="162.56" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="27.94" x2="162.56" y2="38.1" width="0.1524" layer="91"/>
-<junction x="162.56" y="38.1"/>
+<wire x1="167.64" y1="33.02" x2="165.1" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="33.02" x2="165.1" y2="43.18" width="0.1524" layer="91"/>
+<junction x="165.1" y="43.18"/>
 </segment>
 <segment>
 <pinref part="R10" gate="G$1" pin="2"/>
@@ -7075,7 +7081,7 @@ Bypass Capacitors</text>
 <segment>
 <pinref part="SUPPLY11" gate="G$1" pin="3.3V"/>
 <pinref part="C12" gate="G$1" pin="2"/>
-<wire x1="149.86" y1="35.56" x2="149.86" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="40.64" x2="152.4" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SUPPLY12" gate="G$1" pin="3.3V"/>
@@ -7155,8 +7161,8 @@ Bypass Capacitors</text>
 </segment>
 <segment>
 <pinref part="AD5171" gate="G$1" pin="SDA"/>
-<wire x1="165.1" y1="35.56" x2="160.02" y2="35.56" width="0.1524" layer="91"/>
-<label x="160.02" y="35.56" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="167.64" y1="40.64" x2="162.56" y2="40.64" width="0.1524" layer="91"/>
+<label x="162.56" y="40.64" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="IMU1" gate="G$1" pin="SDA"/>
@@ -7182,8 +7188,8 @@ Bypass Capacitors</text>
 </segment>
 <segment>
 <pinref part="AD5171" gate="G$1" pin="SCL"/>
-<wire x1="165.1" y1="33.02" x2="160.02" y2="33.02" width="0.1524" layer="91"/>
-<label x="160.02" y="33.02" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="167.64" y1="38.1" x2="162.56" y2="38.1" width="0.1524" layer="91"/>
+<label x="162.56" y="38.1" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="IMU1" gate="G$1" pin="SCL"/>
@@ -7258,8 +7264,8 @@ Bypass Capacitors</text>
 <label x="-7.62" y="104.14" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="215.9" y1="38.1" x2="215.9" y2="40.64" width="0.1524" layer="91"/>
-<label x="215.9" y="40.64" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="218.44" y1="43.18" x2="218.44" y2="45.72" width="0.1524" layer="91"/>
+<label x="218.44" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="Q2" gate="G$1" pin="C"/>
 </segment>
 </net>
@@ -7297,7 +7303,7 @@ Bypass Capacitors</text>
 <net name="N$11" class="0">
 <segment>
 <pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="208.28" y1="33.02" x2="210.82" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="38.1" x2="213.36" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="Q2" gate="G$1" pin="B"/>
 </segment>
 </net>
@@ -7352,21 +7358,21 @@ Bypass Capacitors</text>
 <net name="N$12" class="0">
 <segment>
 <pinref part="AD5171" gate="G$1" pin="B"/>
-<wire x1="193.04" y1="27.94" x2="195.58" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="27.94" x2="195.58" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="AD5171" gate="G$1" pin="W"/>
-<wire x1="195.58" y1="33.02" x2="193.04" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="R9" gate="G$1" pin="1"/>
 <wire x1="195.58" y1="33.02" x2="198.12" y2="33.02" width="0.1524" layer="91"/>
-<junction x="195.58" y="33.02"/>
+<wire x1="198.12" y1="33.02" x2="198.12" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="AD5171" gate="G$1" pin="W"/>
+<wire x1="198.12" y1="38.1" x2="195.58" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="R9" gate="G$1" pin="1"/>
+<wire x1="198.12" y1="38.1" x2="200.66" y2="38.1" width="0.1524" layer="91"/>
+<junction x="198.12" y="38.1"/>
 </segment>
 </net>
 <net name="D30/LED.CTRL" class="0">
 <segment>
 <pinref part="AD5171" gate="G$1" pin="A"/>
-<wire x1="193.04" y1="38.1" x2="195.58" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="38.1" x2="195.58" y2="45.72" width="0.1524" layer="91"/>
-<label x="195.58" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="195.58" y1="43.18" x2="198.12" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="43.18" x2="198.12" y2="50.8" width="0.1524" layer="91"/>
+<label x="198.12" y="50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="5"/>
